@@ -7,6 +7,13 @@ $ npm i -D webpack webpack-cli webpack-dev-server css-loader style-loader
    1) entry
    2) output
    3) devServer
+   4) module
+      module: {
+        rules: [{
+            test: /\.css$/i,
+            use: ['style-loader', 'css-loader']
+        }]
+      }
 
 3. 스크립팅
   "scripts": {
