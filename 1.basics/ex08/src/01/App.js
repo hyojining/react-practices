@@ -1,8 +1,6 @@
 import React from 'react';
 
-function App() {    
-    // const App = React.createElement('div', null, 'Hello World');
-    // return App;
+function App() {
     return (
         <div>
             <h1>01</h1>
