@@ -2,13 +2,17 @@ ex08: JSX tutorial
 01. 특징1: HTML과의 차이점
 02. 특징2: single root
 03. 함수 컴포넌트
-04. pure React(React API)로 컴포넌트 만들기
+04. Pure React(React API) 컴포넌트
 05. 클래스 컴포넌트
 06. 특징3: JSX 표현식 표기법: { javascript expression }
 07. Comment
 
+rsf: 함수형 컴포넌트
+rsc: 함수형 컴포넌트 (화살표 함수)
 
+rcc: 클래스 컴포넌트
 
+JSX에서는 블락 안에 표현식만! (주석 가능)
 ====================================================================================
 
 1. 설치
