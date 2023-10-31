@@ -1,0 +1,17 @@
+{
+  "name": "ex04",
+  "version": "1.0.0",
+  "description": "4. Env Preset: 변환 규칙 모음\r     1) preset\r         - 여러 플러그인 변환 규칙을 한 번에 적용하기 위해서 관련 플러그인을 모아 놓은 것\r         - 종류\r             1. ECMAPScript 년도 별로 모아 놓은 것\r             2. ECMAScript stage (level 0, 1, 2, 3)로 모아 놓은 것\r             3. 3rd party: TypeSCript, JSX\r             등 다양한다.\r         - ECMAScript Preset은 ENV Preset(preset-env, ECMAScript Level3)이다.\r     2) 설치",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.23.0",
+    "@babel/core": "^7.23.2",
+    "@babel/preset-env": "^7.23.2"
+  }
+}
