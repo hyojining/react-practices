@@ -5,7 +5,9 @@ export default class extends Component {
         super(props);
         // this.val = this.props.begin;
         this.state = {
-            val: this.props.begin
+            val: this.props.begin,
+            val2: 20,
+            val3: 30
         }
     }
 
@@ -17,7 +19,7 @@ export default class extends Component {
                     // console.log(this.val);
                     // this.render();
                     this.setState({
-                        val: this.state.val + 1
+                        val: this.state.val + this.props.step
                     });
                 }}>
                     <strong>+</strong>
