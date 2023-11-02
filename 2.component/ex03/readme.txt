@@ -3,6 +3,7 @@ ex03: React Event
 2) Function Handler
 3) Synthetic Event 객체 (DOM Event 합성)
 4) Event Handler 예제
+    - $ npm i jquery
 5) ref 사용하기: function 컴포넌트
 6) ref 사용하기: Class 컴포넌트
 
