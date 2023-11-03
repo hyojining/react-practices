@@ -3,20 +3,22 @@ import './assets/scss/App.scss'
 import Clock from './Clock';
 
 export default function App() {
+    const [currentTime, setCurrentTime] = useState(new Date());
     const [ticks, setTicks] = useState(0);
 
-    setInterval(() => {
-        setTicks(ticks+1);
-    },1000);
-
+    useEffect(() => {
+        const intervalid = setInterval(() => {
+            setCurrentTime(new Date());
+            setTicks(ticks+1);
+        }, 1000);
+        return (() => clearInterval(intervalid))
+    }, [currentTime]);
+    
     return (
-            <>
-                <span>{ticks}</span>
-                <Clock
-                    message={'ex05: useEffect Hook example'}
-                    hours={state.hours}
-                    minutes={state.minutes}
-                    seconds={state.seconds}/>
-            </>
+            <Clock
+                message={`ex04: ticks ${ticks}`}
+                hours={currentTime.getHours() < 10 ? '0' + currentTime.getHours() : currentTime.getHours()}
+                minutes={currentTime.getMinutes() < 10 ? '0' + currentTime.getMinutes() : currentTime.getMinutes()}
+                seconds={currentTime.getSeconds() < 10 ? '0' + currentTime.getSeconds() : currentTime.getSeconds()}/>
     );
 }
