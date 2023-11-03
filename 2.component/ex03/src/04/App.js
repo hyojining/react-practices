@@ -62,7 +62,7 @@ export default function App() {
                 <br/>
                 <br/>
             <img
-                ref = {imageRef}
+                ref = {imageRef} // useRef를 사용하여 imageRef에 DOM 요소를 할당
                 style={ {
                     cursor: 'pointer',
                     width: 190,
