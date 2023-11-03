@@ -9,10 +9,10 @@ export default function App() {
     useEffect(() => {
         const intervalid = setInterval(() => {
             setCurrentTime(new Date());
-            setTicks(ticks+1);
+            setTicks((ticks) => ticks + 1);
         }, 1000);
         return (() => clearInterval(intervalid))
-    }, [currentTime]);
+    }, []);
     
     return (
             <Clock
