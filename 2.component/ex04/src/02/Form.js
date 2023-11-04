@@ -6,7 +6,7 @@ export default function Form() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [validEmail, setValidEmail] = useState(false);
-    const [gender, setGender] = useState('femail');
+    const [gender, setGender] = useState('female');
     const [birthYear, setBirthYear] = useState('');
     const [description, setDescription] = useState('');
     const [agreeProv, setAgreeProv] = useState('no');
@@ -43,7 +43,7 @@ export default function Form() {
 
             <fieldset>
                 <legend>성별</legend>
-                <label>여</label> <input type="radio" name="gender" value={ "female" } defaultChecked={ gender === 'femail' } onChange={e => setGender(e.target.value)}/>
+                <label>여</label> <input type="radio" name="gender" value={ "female" } defaultChecked={ gender === 'female' } onChange={e => setGender(e.target.value)}/>
                 <label>남</label> <input type="radio" name="gender" value={ "male" } defaultChecked={ gender === 'male' } onChange={e => setGender(e.target.value)}/>
             </fieldset>
 

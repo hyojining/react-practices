@@ -16,7 +16,7 @@ export default function Hook({ color }) {
      *   2. After Rendering 함수( 상태의 변화 -> 렌더링 -> 함수)
      *   class component lifecycle(componentDidMount, componentDidUpdate)
      */
-    useEffect(() => {
+    useEffect(() => { // 컴포넌트가 렌더링될 때 실행 (배열 x)
         console.log('After Rendering');
     });
 
@@ -35,9 +35,9 @@ export default function Hook({ color }) {
     /**
      *  4. Alternative 02: componentDidMount & componentWillUnmount
      */
-    useEffect(() => {
+    useEffect(() => { // 처음 마운트될 때 실행 (빈 배열)
         console.log('After Mount(componentDidMount)');
-        return (function(){
+        return (function(){ // 컴포넌트가 언마운트될 때
             console.log('After Unmount(componentWillUnmount)');
         });
     }, []);
