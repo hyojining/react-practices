@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from './assets/css/TaskList.css';
 import Task from './Task';
 
 function TaskList({tasks}) {
@@ -12,6 +13,7 @@ function TaskList({tasks}) {
                                         done={task.done}/>)
             }
             </ul>
+            <input type='text' placeholder={'태스크 추가'} className={styles.TaskList__add_task}/>
         </div>
     );
 }
