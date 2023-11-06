@@ -16,7 +16,7 @@ export default function App() {
     
     return (
             <Clock
-                message={`ex04: ticks ${ticks}`}
+                message={`ex05: ticks ${ticks}`}
                 hours={currentTime.getHours() < 10 ? '0' + currentTime.getHours() : currentTime.getHours()}
                 minutes={currentTime.getMinutes() < 10 ? '0' + currentTime.getMinutes() : currentTime.getMinutes()}
                 seconds={currentTime.getSeconds() < 10 ? '0' + currentTime.getSeconds() : currentTime.getSeconds()}/>
