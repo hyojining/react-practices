@@ -1,0 +1,13 @@
+{
+  "name": "ex06",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "ex05: Component Lifecycle\r 01. Class Component\r     01) LifecycleI: mount\r         1. constructor\r         2. getDerivedStateFromProps\r         3. render ***\r         4. componentDidMount ***\r     02) LifecycleII: update\r         1. getDerivedStateFromProps\r         2. shouldComponentUpdate *\r         3. render ***\r         4. getSnapshotBeforeUpdate\r         5. componentDidUpdate ***\r     03) LifecycleIII: unmount\r         1. componentWillUnmount ***",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
