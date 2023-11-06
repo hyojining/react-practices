@@ -29,10 +29,16 @@ export default function App() {
     }, []);
     
     return (
+        <>
+        {
+            ticks % 10 === 0 ?
+            null :
             <Clock
-                message={`ex05: ticks ${ticks}`}
+                message={`ex05-Component LifeCycle: ${ticks}`}
                 hours={currentTime.hours}
                 minutes={currentTime.minutes}
                 seconds={currentTime.seconds}/>
+        }
+        </>
     );
 }
