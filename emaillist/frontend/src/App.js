@@ -14,28 +14,29 @@ function App() {
         setEmails(newEmails);
     };
 
-    const addEmail = async (email) => {
+    const addEmail = async (email) => { // 비동기 함수
         try{
-            const insertResponse = await fetch('/api', {
+            // 서버의 /api 엔드포인트에 POST 요청을 보내고, 비동기적으로 응답을 기다림
+            const insertResponse = await fetch('/api', { 
                 method: 'post',
                 headers: {
                     'Content-Type': 'application/json',
                     'Accept': 'application/json'
                 },
-                body: JSON.stringify(email)
+                body: JSON.stringify(email) // JavaScript에서 객체를 JSON 문자열로 변환
             });
 
             if(!insertResponse.ok) {
                 throw new Error(`${insertResponse.status} ${insertResponse.statusText}`)
             }
 
-            const json = await insertResponse.json();
+            const json = await insertResponse.json(); // response에서 JSON 데이터 추출
             
             if(json.result !== 'success') {
                 throw new Error(`${json.result} ${json.message}`)
             }
 
-            const newEmails = [...emails, json.data];
+            const newEmails = [...emails, json.data]; // 기존 emails 배열에 새 이메일 데이터 추가
             setEmails(newEmails);
             
         } catch(err) {
