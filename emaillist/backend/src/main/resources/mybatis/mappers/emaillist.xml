@@ -16,6 +16,6 @@
 		insert 
 		  into emaillist 
 		values(null, #{firstName }, #{lastName }, #{email })
-		]]>
+		]]>  
 	</insert>
 </mapper>
