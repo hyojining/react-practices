@@ -18,8 +18,7 @@ public class EmailllistRepository {
 		return sqlSession.selectList("emaillist.findAll");
 	}
 
-	public Long insert(EmaillistVo vo) {
-		sqlSession.insert("emaillist.insert", vo);
-		return vo.getNo();
+	public Boolean insert(EmaillistVo vo) {
+		return sqlSession.insert("emaillist.insert", vo) == 1;
 	}
 }

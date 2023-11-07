@@ -36,8 +36,7 @@ function App() {
                 throw new Error(`${json.result} ${json.message}`)
             }
 
-            const newEmails = [...emails, json.data]; // 기존 emails 배열에 새 이메일 데이터 추가
-            setEmails(newEmails);
+            setEmails([json.data, ...emails]); // 기존 emails 배열에 새 이메일 데이터 추가
             
         } catch(err) {
             console.error(err);

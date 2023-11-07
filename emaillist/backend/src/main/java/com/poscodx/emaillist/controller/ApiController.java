@@ -25,9 +25,8 @@ public class ApiController {
 	}
 	
 	@PostMapping("/api")
-	public ResponseEntity<JsonResult> create(@RequestBody EmaillistVo vo) {		
-		Long no = emaillistRepository.insert(vo);
-		vo.setNo(no);
+	public ResponseEntity<JsonResult> create(@RequestBody EmaillistVo vo) {
+		emaillistRepository.insert(vo);
 		
 		return ResponseEntity
 				.status(HttpStatus.OK)
