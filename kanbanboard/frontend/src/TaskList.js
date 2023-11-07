@@ -1,26 +1,21 @@
-import React, {useState} from 'react';
-import Task from './Task';
+import React from 'react';
 import styles from './assets/css/TaskList.css';
+import Task from './Task';
 
-const TaskList = ({tasks}) => {
-
+function TaskList({tasks}) {
     return (
-        <div>
+        <div class='TaskList'>
             <ul>
-                {
-                    tasks.map(task => <Task
+            {
+                tasks.map(task => <Task 
                                         key={task.no}
-                                        no={task.no}                                        
-                                        name={task.name}
-                                        done={task.done} />)
-                }
+                                        name={task.name} 
+                                        done={task.done}/>)
+            }
             </ul>
-            <input
-                type='text'
-                placeholder={'태스크 추가'}
-                className={styles.TaskList__add_task}/>
+            <input type='text' placeholder={'태스크 추가'} className={styles.TaskList__add_task}/>
         </div>
     );
-};
+}
 
 export default TaskList;
