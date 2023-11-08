@@ -1,14 +1,16 @@
 import React, {useState} from 'react';
 import styles from './assets/css/Task.css';
 
-function Task({name, done}) {
-    const [isdone, setDone] = useState(done);
-
+function Task({no, name, done, updateTaskDone, deleteTask}) {
     return (
         <li className={styles.TaskList__Task}>
-            <input type='checkbox' checked={isdone} onChange={() => setDone(!isdone)}/>
+            <input type='checkbox' 
+                checked={done === 'Y'} 
+                onChange={(e) => {
+                    updateTaskDone(no, e.target.checked ? 'Y' : 'N');
+                }}/>
             {name}
-            <a href='#' className={styles.TaskList__Task__remove}></a>
+            <a href='#' className={styles.TaskList__Task__remove} onClick={(e) =>{deleteTask(no)}}></a>
         </li>
     );
 }
