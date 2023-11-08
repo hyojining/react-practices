@@ -4,8 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "debug": "npx webpack serve --config config/webpack.config.js --progress --mode development",
-    "build": "npx webpack --config config/webpack.config.js --mode production"
+    "build:be": "cd ../backend && mvn clean package",
+    "build:fe": "npx webpack --config config/webpack.config.js --mode production",
+    "dev": "concurrently \"npm run dev:be\" \"npm run dev:fe\" --kill-others",
+    "dev:be": "cd ../backend && mvn spring-boot:run",
+    "dev:fe": "npx webpack serve --config config/webpack.config.js --progress --mode development"
   },
   "keywords": [],
   "author": "",
@@ -18,6 +21,7 @@
     "@babel/preset-react": "^7.22.15",
     "babel-loader": "^9.1.3",
     "case-sensitive-paths-webpack-plugin": "^2.4.0",
+    "concurrently": "^8.2.2",
     "css-loader": "^6.8.1",
     "node-sass": "^9.0.0",
     "sass-loader": "^13.3.2",
