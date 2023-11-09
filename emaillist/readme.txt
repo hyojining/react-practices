@@ -29,3 +29,6 @@
 3-2. deploy: Publish Over SSH 플러그인(Jankins)
     1) Publish Over SSH 플러그인 설치
     2) Dashboard > Jenkins 관리 > System
+        - 실행서버(SSH Servers) 등록: springboot-publish-server
+        - 프로젝트의 빌드 후 조치(post-build action)의 Send build artifacts over SSH 설정
+            1. emaillist.jar: transfer
